@@ -1,0 +1,1518 @@
+
+#include<stdio.h>
+//***************************************************
+void thalapakatti()
+{
+    printf("thalapakatti \n");
+    printf("******************\n");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*******************************************************************************************************************
+void dharbar()
+{
+    printf("dharbar \n");
+    printf("******************\n");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*******************************************************************************************************************
+void kongumess()
+{
+    printf("kongumess \n");
+    printf("******************\n");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*******************************************************************************************************************
+void kokrakkko()
+{
+    printf("kokrakkko \n");
+    printf("******************\n");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************namakkal*********************************************************************
+void Nalahotels()
+{
+    printf("Nalahotels \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************namakkal******************************************************************
+void Shanthiinngrand()
+{
+    printf("Shanthiinngrand \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************namakkal******************************************************************
+void Sanuinternational()
+{
+    printf("Sanuinternational \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************namakkal******************************************************************
+void chailapaa()
+{
+    printf("chailapaa \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************thirchy*******************************************************************
+void SRMHotel()
+{
+    printf("SRMHotel \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//******************************************thirchy******************************************************************
+void RedFoxHotel()
+{
+    printf("RedFoxHotel \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************thirchy*******************************************************************
+void HotelBlossoms()
+{
+    printf("HotelBlossoms \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************thirchy*******************************************************************
+void HotelOxinaLygon()
+{
+    printf("HotelOxinaLygon \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************theni*********************************************************************
+void WesternGatz()
+{
+    printf("WesternGatz \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************theni*********************************************************************
+void SivasRegency()
+{
+    printf("SivasRegency \n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************theni*********************************************************************
+void GreenRoyale() {
+    int thala;
+    printf(" THALAPAKATTI\n");
+    printf("******************");
+    printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI \n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+    printf("NON VEG MENUS ARE : \n 5-MUTTON BIRYANI\n 6-CHICKEN BIRYANI\n 7-FISH BIRYANI\n 8-CHICKEN 65\n");
+    int order, gst, tot, total = 0, q, totalQuantity = 0, price;
+    // Maximum number of items
+    #define MAX_ITEMS 100
+    int quantities[MAX_ITEMS];
+    int prices[MAX_ITEMS];
+    char itemNames[MAX_ITEMS][50];  // Assuming item names have a maximum length of 50 characters
+    int itemCount = 0;
+    do {
+        printf("Enter the dish you want or else enter--0 : ");
+        scanf("%d", &order);
+        if (order == 0) {
+            break;
+        }
+        printf("Please enter the quantity: ");
+        scanf("%d", &q);
+        totalQuantity += q;
+        switch (order) {
+            case 1:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUSHROOM BIRYANI");
+                break;
+            case 2:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "GOBI MANJUERIAN");
+                break;
+            case 3:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FULL MEALS");
+                break;
+            case 4:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "VERITY RICE");
+                break;
+            case 5:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "MUTTON BIRYANI");
+                break;
+            case 6:
+                price = 200;
+                total += 200 * q;
+                strcpy(itemNames[itemCount], "CHICKEN BIRYANI");
+                break;
+            case 7:
+                price = 150;
+                total += 150 * q;
+                strcpy(itemNames[itemCount], "FISH BIRYANI");
+                break;
+            case 8:
+                price = 100;
+                total += 100 * q;
+                strcpy(itemNames[itemCount], "CHICKEN 65");
+                break;
+            default:
+                printf("Invalid item number!\n");
+                continue; // Skip the current iteration if the item is invalid
+        }
+        quantities[itemCount] = q;
+        prices[itemCount] = price * q;
+        itemCount++;
+    } while (order != 0);
+    gst = (total * 18) / 100;
+    tot = gst + total;
+    printf("\n---------------------\n");
+    printf("  Bill Details\n");
+    printf("---------------------\n");
+    
+    // Print details for each item
+    for (int i = 0; i < itemCount; i++) {
+        printf("%-20s %-5d ₹%-5d\n", itemNames[i], quantities[i], prices[i]);
+    }
+    printf("---------------------\n");
+    printf("Total amount you need to pay is: ₹%d\n", total);
+    printf("GST for your order is: ₹%d\n", gst);
+    printf("Overall total amount with GST is: ₹%d\n", tot);
+    printf("---------------------\n");
+}
+//*****************************************theni*********************************************************************
+void HotelRamyas()
+{
+    int thala;
+    printf("YOU CHOOSED HOTEL RAMYAS\n");
+    printf("1-VEG\n2-NON VEG\n");
+    printf("ENTER THE CHOICE: ");
+    scanf("%d", &thala);
+    if (thala == 1) 
+    {
+        printf("VEG MENUS ARE : \n 1-MUSHROOM BIRYANI\n 2-GOBI MANJUERIAN\n 3-FULL MEALS\n 4-VERITY RICE\n");
+            int order,gst,tot,total=0,q,totalQuantity=0;
+            do
+            {   
+                printf("Enter the dish you want or else enter--0 : ");
+                scanf("%d", &order);
+                if (order == 0) 
+                {
+                    break;
+                }
+            printf("Please enter the quantity: ");
+            scanf("%d", &q);
+            totalQuantity += q;
+            switch (order) {
+                case 1:
+                    total += 100 * q;
+                    break;
+                case 2:
+                    total += 200 * q;
+                    break;
+                case 3:
+                    total += 150 * q;
+                    break;
+                case 4:
+                    total += 100 * q;
+                    break;
+                default:
+                    printf("Invalid item number!\n");
+            }
+            }
+            while (order != 0);
+            gst=(total*18)/100;
+            tot=gst+total;
+            printf("--------------------------------------------------------\n");
+            printf("Total quantaity:  %d\n", totalQuantity);
+            printf("Total amount you need to pay is: ₹%d\n", total);
+            printf("GST for your order is: ₹%d\n", gst);
+            printf("Over all total amount with GST is: ₹%d\n", tot);
+            printf("--------------------------------------------------------\n");
+    }
+     else if (thala == 2)
+     {
+        printf("NON VEG MENUS ARE : \n 1-MUTTON BIRYANI\n 2-CHIKAN BIRYANI\n 3-FISH BIRYANI\n 4-CHIKAN 65\n");
+            //printf("ENTER YOUR DISH :");
+            int order1,gst1,tot1,total1,totalQuantity1=0,q1;
+            do 
+            {
+                printf("Enter the dish you want or else enter--0 : ");
+                scanf("%d", &order1);
+                if (order1 == 0) {
+                    break;
+                    }
+                printf("Please enter the quantity: ");
+                scanf("%d", &q1);
+                totalQuantity1 += q1;
+                switch (order1) 
+                {
+                    case 1:
+                        total1 += 100 * q1;
+                        break;
+                    case 2:
+                        total1 += 200 * q1;
+                        break;
+                    case 3:
+                        total1 += 150 * q1;
+                        break;
+                    case 4:
+                        total1 += 100 * q1;
+                        break;
+                    default:
+                        printf("Invalid item number!\n");
+                }
+            }
+            while (order1 != 0);
+            gst1=(total1*8)/100;
+            tot1=gst1+total1;
+            printf("--------------------------------------------------------\n");
+            printf("Total quantaity:  %d\n", totalQuantity1);
+            printf("Total amount for your order is: ₹%d\n", total1);
+            printf("GST for your order is: ₹%d\n", gst1);
+            printf("Total amount for your order with GST is: ₹%d\n", tot1);
+            printf("--------------------------------------------------------\n");
+        }
+    else
+    {
+        printf("Invalid choice!\n");
+    }
+}
+//*******************************************************************************************************************
+//*****************************************karur*********************************************************************
+void fun1()
+    {
+        printf("\n***** your choice is karur ***** ");
+        printf("\n 1-THALAPAKATTI\n 2-DHARBAR\n 3-KONGUMESS\n 4-KOKKARAKKO BRIYANI\n");
+        printf("ENTER YOUR HOTEL : ");
+        int ho;
+         scanf("%d",&ho);
+        switch(ho)
+        {
+            case 1:  thalapakatti() ; break;
+            case 2:  dharbar()      ; break;
+            case 3:  kongumess()    ; break;          
+            case 4:  kokrakkko()    ; break;
+            default:
+            printf("Invalid item number!\n");break;
+            
+        }
+    }
+//**************************************namakkal*********************************************************************
+void fun2()
+    {
+        printf("\n***** your choice is namakkal ***** ");
+        printf("\n 1-NALAHOTELS\n 2-SHANTHIINNGRAND\n 3-SANUINTERNATIONAL\n 4-CHAILAPAA\n");
+        printf("ENTER YOUR HOTEL : ");
+        int ho1;
+         scanf("%d",&ho1);
+        switch(ho1)
+        {
+            case 1:  Nalahotels() ; break;
+            case 2:  Shanthiinngrand(); break;
+            case 3:  Sanuinternational()    ; break;          
+            case 4:  chailapaa()    ; break;
+            default:
+            printf("Invalid item number!\n");break;
+            
+        }
+    }
+//**************************************trichy*****************************************
+void fun3()
+    {
+        printf("\n***** your choice is trichy ***** ");
+        printf("\n 1-SRMHotel\n 2-Red Fox Hotel\n 3-Hotel Blossoms\n 4-Hotel Oxina Lygon\n");
+        printf("ENTER YOUR HOTEL : ");
+        int ho1;
+         scanf("%d",&ho1);
+        switch(ho1)
+        {
+            case 1:  SRMHotel() ; break;
+            case 2:  RedFoxHotel(); break;
+            case 3:  HotelBlossoms()    ; break;          
+            case 4:  HotelOxinaLygon()    ; break;
+            default:
+            printf("Invalid item number!\n");break;
+            
+        }
+    }
+//****************************************thani****************************************
+void fun4()
+    {
+        printf("\n***** your choice is theni ***** ");
+        printf("\n 1-Hotel Western Gatz\n 2-Hotel Sivas Regency\n 3-Green Royale Resorts\n 4-Hotel Ramyas\n");
+        printf("ENTER YOUR HOTEL : ");
+        int ho1;
+         scanf("%d",&ho1);
+        switch(ho1)
+        {
+            case 1:  WesternGatz() ; break;
+            case 2:  SivasRegency(); break;
+            case 3:  GreenRoyale()    ; break;          
+            case 4:  HotelRamyas()    ; break;
+            default:
+            printf("Invalid item number!\n");break;
+            
+        }
+    }
+//*************************************************************************************
+    
+int main(){
+    printf("*********************************************************\n");
+    printf("*************** HOTEL MANAGEMENT SYSTEM *****************\n");
+    printf("*********************************************************\n");
+    printf("hotel location\n");
+    printf("*****************\n");
+    printf("1-KARUR\n2-NAMMAKAL\n3-TRICHY\n4-THENI\n");
+    printf("ENTER YOUR LOCATION : ");
+    int lo;
+    scanf("%d",&lo);
+    switch(lo){
+        case 1: fun1();break;
+        case 2: fun2();break;
+        case 3: fun3();break;
+        case 4: fun4();break;
+        default:
+            printf("Invalid item number!\n");
+    }
+}
